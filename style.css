@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Offside&display=swap");
+
+body {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(85)'><rect x='0' y='0' width='100%' height='100%' fill='rgb(255,255,255)'/><path d='M40 45a5 5 0 110-10 5 5 0 010 10zM0 45a5 5 0 110-10 5 5 0 010 10zM0 5A5 5 0 110-5 5 5 0 010 5zm40 0a5 5 0 110-10 5 5 0 010 10z'  stroke-width='8' stroke='hsla(47, 84%, 57%, 1)' fill='none'/><path d='M20 25a5 5 0 110-10 5 5 0 010 10z'  stroke-width='8' stroke='hsla(0, 0%, 0%, 1)' fill='none'/></pattern></defs><rect width='100%' height='100%' fill='url(%23a)'/></svg>");
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+}
+
+p {
+  margin: 0;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  height: 150px;
+  background-color: rgba(233, 219, 20, 1);
+  position: relative;
+  margin-bottom: 50px;
+}
+
+header::after {
+  content: "";
+  background-color: rgba(233, 219, 20, 1);
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  top: 110px;
+  transform: rotate(-1deg);
+}
+
+header::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 1);
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  top: 110px;
+  transform: rotate(1deg);
+}
+
+.purpay {
+  border-radius: 2px;
+  margin: 0 auto;
+  display: flex;
+  background-color: #fff;
+  width: 70%;
+}
+
+.purpay fieldset {
+  width: 45%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.purpay fieldset input[type="text"] {
+  text-align: center;
+  width: 22.5%;
+  border: 0;
+  /* border-bottom: 1px solid #000; */
+  padding: 0;
+  height: 1.2em;
+  font-size: 1.3em;
+  padding: 2px 0 2px;
+  font-family: Nunito;
+}
+
+.purpay fieldset input[type="text"]::placeholder {
+  font-family: Nunito;
+  font-size: 1.2em;
+  opacity: 0.4;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.purpay fieldset input[type="text"]:focus {
+  outline: 0;
+  font-family: Nunito;
+}
+
+.cid {
+  width: 70%;
+  background-color: #fff;
+  margin: 5px auto 0;
+}
+
+table {
+  border: 1px solid #000;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #000;
+  padding: 0.5rem;
+}
+
+thead td,
+tfoot td {
+}
+
+thead,
+tfoot {
+  font-weight: bold;
+  text-align: center;
+}
+
+tr td input[type="text"] {
+  width: 100%;
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 100%;
+  border: 0;
+  font-size: 1.2em;
+  font-family: Nunito;
+  text-align: center;
+}
+
+tr td input[type="text"]:focus {
+  outline: 0;
+}
+
+tr td:nth-child(2) {
+  padding: 0;
+  height: 0px;
+  width: 50%;
+}
+
+.check {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.check button {
+  padding: 5px 10px;
+  font-size: 1.1em;
+  font-family: Nunito;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  box-shadow: inset 0px 0px 5px 0px #000;
+}
+
+.check button:hover {
+  background-color: rgba(233, 219, 20, 1);
+}
+
+.check button:focus {
+  outline: 0;
+}
+
+.change-container {
+  width: 40%;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.change-output {
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(
+    to right,
+    rgba(233, 219, 20, 1),
+    rgb(233, 226, 134)
+  );
+  margin: 5px auto;
+  text-align: center;
+  color: #000;
+  text-shadow: 0px 0px 2px #000;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+}
+
+.change-output:nth-child(1) {
+  animation: change-rotation 4s cubic-bezier(.92,.22,.18,.72) infinite, change-color 5s infinite;
+}
+
+.change-output:nth-child(2) {
+  animation: change-rotation 4s infinite reverse cubic-bezier(.92,.22,.18,.72), change-color 5s infinite reverse;
+}
+
+@keyframes change-color {
+  from {
+    background-image: linear-gradient(
+      0deg,
+      rgba(233, 219, 20, 1),
+      rgb(233, 226, 134)
+    );
+  }
+  25% {
+    background-image: linear-gradient(
+      90deg,
+      rgba(233, 219, 20, 1),
+      rgb(233, 226, 134)
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      180deg,
+      rgba(233, 219, 20, 1),
+      rgb(233, 226, 134)
+    );
+  }
+  75% {
+    background-image: linear-gradient(
+      270deg,
+      rgba(233, 219, 20, 1),
+      rgb(233, 226, 134)
+    );
+  }
+  to {
+    background-image: linear-gradient(
+      360deg,
+      rgba(233, 219, 20, 1),
+      rgb(233, 226, 134)
+    );
+  }
+}
+
+@keyframes change-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.change-output div {
+  padding: 2px;
+}
+
+.change-output div h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.change-output div h2 {
+  font-family: "Offside", cursive;
+}
+
+.results {
+  display: flex;
+  width: 50%;
+  margin: 0 auto
+}
+
+tr td:nth-child(3) {
+  display: none;
+}
